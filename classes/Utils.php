@@ -556,6 +556,7 @@ class Utils{
   	  	Logging::log($query);
     	  Logging::log("Running query from ".$modelFile." on endpoint ".$e->getSparqlURL(), E_USER_NOTICE);
   	  }
+  	  $lodspk['queryText'][$strippedModelFile] = $query;
   	  $initTime = microtime(true);
   	  $aux = $e->query($query, Utils::getResultsType($query));
   	  $endTime = microtime(true);
